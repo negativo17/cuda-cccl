@@ -43,6 +43,7 @@ CXX Core Compute Libraries development files.
 %install
 mkdir -p %{buildroot}%{_includedir}
 mkdir -p %{buildroot}%{_libdir}/cmake
+
 cp -fr include/* %{buildroot}%{_includedir}/
 cp -fr lib/cmake/* %{buildroot}%{_libdir}/cmake
 rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
