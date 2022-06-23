@@ -4,7 +4,7 @@
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
-Version:        11.6.55
+Version:        11.7.58
 Release:        1%{?dist}
 Summary:        CXX Core Compute Libraries
 License:        CUDA Toolkit
@@ -55,6 +55,9 @@ rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
 %{_libdir}/cmake/*
 
 %changelog
+* Thu Jun 23 2022 Simone Caronni <negativo17@gmail.com> - 1:11.7.58-1
+- Update to 11.7.58.
+
 * Tue Jan 25 2022 Simone Caronni <negativo17@gmail.com> - 11.6.55-1
 - First build with the new tarball components.
 
