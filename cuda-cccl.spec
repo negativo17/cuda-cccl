@@ -1,6 +1,6 @@
 %global real_name cuda_cccl
 
-%global major_package_version 11-8
+%global major_package_version 12-0
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
