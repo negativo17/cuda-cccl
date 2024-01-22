@@ -5,7 +5,7 @@
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
 Version:        12.3.101
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        CXX Core Compute Libraries
 License:        CUDA Toolkit
 URL:            https://developer.nvidia.com/cuda-toolkit
@@ -45,6 +45,9 @@ mkdir -p %{buildroot}%{_includedir}
 mkdir -p %{buildroot}%{_libdir}/cmake
 
 cp -fr include/* %{buildroot}%{_includedir}/
+# Conflict with rocthrust-devel in main repositories:
+mv %{buildroot}%{_includedir}/thrust %{buildroot}%{_includedir}/cuda/
+
 cp -fr lib/cmake/* %{buildroot}%{_libdir}/cmake
 rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
 
@@ -55,6 +58,10 @@ rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
 %{_libdir}/cmake/*
 
 %changelog
+* Mon Jan 22 2024 Simone Caronni <negativo17@gmail.com> - 1:12.3.101-2
+- Move /usr/include/thrust to /usr/include/cuda/thrust to avoid conflict with
+  rocthrust-devel (#2).
+
 * Tue Nov 28 2023 Simone Caronni <negativo17@gmail.com> - 1:12.3.101-1
 - Update to 12.3.101.
 
