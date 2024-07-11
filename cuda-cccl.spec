@@ -4,7 +4,7 @@
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
-Version:        12.4.99
+Version:        12.5.39
 Release:        1%{?dist}
 Summary:        CXX Core Compute Libraries
 License:        CUDA Toolkit
@@ -53,6 +53,9 @@ rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
 %{_libdir}/cmake/*
 
 %changelog
+* Thu Jul 11 2024 Simone Caronni <negativo17@gmail.com> - 1:12.5.39-1
+- Update to 12.5.39.
+
 * Tue Mar 12 2024 Simone Caronni <negativo17@gmail.com> - 1:12.4.99-1
 - Update to 12.4.99.
 - Drop ppc64le.
