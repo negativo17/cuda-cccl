@@ -1,5 +1,6 @@
 %global real_name cuda_cccl
 
+%global debug_package %{nil}
 %global major_package_version 12-5
 
 Name:           %(echo %real_name | tr '_' '-')
