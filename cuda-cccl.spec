@@ -41,8 +41,6 @@ mkdir -p %{buildroot}%{_includedir}
 mkdir -p %{buildroot}%{_libdir}/cmake
 
 cp -fr include/* %{buildroot}%{_includedir}/
-# Conflict with rocthrust-devel in main repositories:
-mv %{buildroot}%{_includedir}/thrust %{buildroot}%{_includedir}/cuda/
 
 cp -fr lib/cmake/* %{buildroot}%{_libdir}/cmake
 rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
