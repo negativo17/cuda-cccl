@@ -5,7 +5,7 @@
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
-Version:        12.8.55
+Version:        13.0.50
 Release:        1%{?dist}
 Summary:        CXX Core Compute Libraries
 License:        CUDA Toolkit
@@ -54,6 +54,9 @@ rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
 %{_libdir}/cmake/*
 
 %changelog
+* Mon Aug 25 2025 Simone Caronni <negativo17@gmail.com> - 1:13.0.50-1
+- Update to 13.0.50.
+
 * Fri Feb 07 2025 Simone Caronni <negativo17@gmail.com> - 1:12.8.55-1
 - Update to 12.8.55.
 
