@@ -6,7 +6,7 @@
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
 Version:        13.0.85
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        CXX Core Compute Libraries
 License:        CUDA Toolkit
 URL:            https://developer.nvidia.com/cuda-toolkit
@@ -40,7 +40,7 @@ CXX Core Compute Libraries development files.
 mkdir -p %{buildroot}%{_includedir}
 mkdir -p %{buildroot}%{_libdir}/cmake
 
-cp -fr include/cccl/* %{buildroot}%{_includedir}/
+cp -fr include/* %{buildroot}%{_includedir}/
 
 cp -fr lib/cmake/* %{buildroot}%{_libdir}/cmake
 rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
@@ -52,6 +52,9 @@ rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
 %{_libdir}/cmake/*
 
 %changelog
+* Fri Oct 31 2025 Simone Caronni <negativo17@gmail.com> - 1:13.0.85-3
+- Restore headers location.
+
 * Fri Oct 31 2025 Simone Caronni <negativo17@gmail.com> - 1:13.0.85-2
 - Adjust build for nested include directory.
 
