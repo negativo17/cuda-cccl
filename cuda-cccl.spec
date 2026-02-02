@@ -5,8 +5,8 @@
 
 Name:           %(echo %real_name | tr '_' '-')
 Epoch:          1
-Version:        13.0.85
-Release:        3%{?dist}
+Version:        13.1.115
+Release:        1%{?dist}
 Summary:        CXX Core Compute Libraries
 License:        CUDA Toolkit
 URL:            https://developer.nvidia.com/cuda-toolkit
@@ -52,6 +52,9 @@ rm -f %{buildroot}%{_libdir}/cmake/thrust/README.md
 %{_libdir}/cmake/*
 
 %changelog
+* Mon Feb 02 2026 Simone Caronni <negativo17@gmail.com> - 1:13.1.115-1
+- Update to 13.1.115.
+
 * Fri Oct 31 2025 Simone Caronni <negativo17@gmail.com> - 1:13.0.85-3
 - Restore headers location.
 
