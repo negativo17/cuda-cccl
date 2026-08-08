@@ -1,4 +1,4 @@
-%global real_name cuda_cccl
+%global real_name cccl
 
 %global debug_package %{nil}
 %global major_package_version 13-1
